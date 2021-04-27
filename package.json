@@ -1,0 +1,28 @@
+{
+  "name": "sns-publish-topic",
+  "version": "1.0.0",
+  "description": "Send a SNS Topic via GitHub Actions",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nothingalike/sns-publish-topic.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "awz",
+    "sns",
+    "sms"
+  ],
+  "author": "Kyle Johns",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nothingalike/sns-publish-topic/issues"
+  },
+  "homepage": "https://github.com/nothingalike/sns-publish-topic#readme",
+  "dependencies": {
+    "@actions/core": "^1.1.0",
+    "aws-sdk": "^2.630.0"
+  },
+  "devDependencies": {}
+}

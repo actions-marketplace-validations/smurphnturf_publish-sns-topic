@@ -1,0 +1,28 @@
+name: "AWS SNS - Publish Topic"
+author: "Kyle Johns"
+description: "Send a SNS Topic via GitHub Actions"
+inputs:
+  MESSAGE:
+    description: "The message you want to send"
+    required: true
+  TOPIC_ARN:
+    description: "The topic arn you are sending"
+    required: true
+  AWS_REGION:
+    description: "A AWSN SNS Region. Can alternatively be stored in environment"
+    required: true
+  AWS_ACCESS_KEY_ID:
+    description: "A AWS SNS Key. Can alternatively be stored in environment"
+    required: true
+  AWS_SECRET_ACCESS_KEY:
+    description: "A AWS SNS Secret. Can alternatively be stored in environment"
+    required: true
+outputs:
+  messageID:
+    description: "The AWS SNS Message ID"
+runs:
+  using: "node12"
+  main: "src/index.js"
+branding:
+  color: "orange"
+  icon: "message-circle"
