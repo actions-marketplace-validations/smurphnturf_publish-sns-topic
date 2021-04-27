@@ -1,4 +1,4 @@
-name: "AWS SNS - Publish Topic"
+name: "AWS SNS - Publish Topic w/ SessionToken"
 author: "Kyle Johns"
 description: "Send a SNS Topic via GitHub Actions"
 inputs:
