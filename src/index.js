@@ -18,10 +18,12 @@ function execute() {
       sessionToken: AWS_SESSION_TOKEN
     });
 
-    core.debug(MESSAGE);
+    core.info(MESSAGE);
     
+    const STRINGIFIED_MESSAGE = JSON.stringify(MESSAGE);
+    core.info(STRINGIFIED_MESSAGE);
     const params = {
-      Message: MESSAGE,
+      Message: STRINGIFIED_MESSAGE,
       TopicArn: TOPIC_ARN
     };
 
@@ -29,16 +31,16 @@ function execute() {
 
     awsClient.publish(params, function(err, data) {
       if (err) {
-        core.debug(err.Message);
+        core.error(err.Message);
         core.setFailed(err.Message); 
       }
       else {
-        core.debug("Published Topic Sent!");
+        core.info("Published Topic Sent!");
         return data.MessageId;
       }
     });
   }catch(error) {
-    core.debug(err.Message);
+    core.error(err.Message);
     core.setFailed(error.message);
   }
 }
